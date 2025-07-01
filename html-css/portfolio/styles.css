@@ -1,0 +1,22 @@
+
+
+body{
+    background-color: black;
+    color: white;
+}
+.customTextWhite{
+    color: white;
+}
+
+.customFontFamily{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+}
+
+span{
+    text-decoration: underline;
+}
+
+.card:hover{
+    box-shadow: 2px 2px 3px 3px rgb(255, 166, 0);
+}

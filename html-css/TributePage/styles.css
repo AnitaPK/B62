@@ -1,0 +1,230 @@
+    * {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        box-sizing: border-box;
+        margin: 0;
+        /* padding: 0; */
+    }
+    body{
+        background-color: rgb(181, 216, 255);
+    }
+
+    .gradEffect {
+        background-image: linear-gradient(to right, red, black, blue);
+
+    }
+
+    .navbar1 {
+        background-color: red;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 30px;
+        position: sticky;
+        top: 0
+    }
+
+    .listSection {
+        width: 400px;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 20px;
+        font-size: x-large;
+
+    }
+
+    .textFormat,
+    .navlist {
+        background-image: linear-gradient(to right, red, black, blue);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: xx-large;
+    }
+
+    .navItem:link {
+        text-decoration: none;
+        color: white;
+    }
+
+    .navItem:hover {
+        text-decoration: underline;
+        color: white;
+
+    }
+
+    .navItem:active {
+        color: white;
+
+    }
+
+    .navItem:visited {
+        color: white;
+
+    }
+
+
+    .logo {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+    }
+
+    h1 {
+        color: red;
+        text-align: center;
+        text-shadow: 2px 2px 3px black, 3px 3px 1px blue;
+        font-size: 50px;
+    }
+
+    .paraOne {
+        color: blue;
+    }
+
+    .SteveDitko {
+        color: red;
+    }
+
+    .GenInfo {
+        color: white;
+    }
+
+    .customFontSize {
+        font-size: xx-large;
+        padding: 40px;
+        text-align: center;
+    }
+
+    .historyDiv {
+        background-color: black;
+    }
+
+    .movieContainer {
+        width: 70%;
+        margin: 10px auto;
+        display: flex;
+        /* background-color: blue; */
+        /* background-image: url("./infoImage.jpg");
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-clip:content-box; */
+
+        border-radius: 5px 120px;
+    }
+
+    .leftDiv {
+        flex: 1;
+        padding: 30px 10px;
+    }
+
+    .rightDiv {
+        color: white;
+        flex: 1;
+        padding: 70px 30px;
+    }
+
+    .goToTopDiv {
+        width: 100px;
+        position: fixed;
+        right: 20px;
+        bottom: 50px;
+    }
+
+    a.goToTop:link {
+        background-color: rgb(43, 255, 43);
+        text-decoration: none;
+        padding: 4px;
+        /* color: white; */
+
+    }
+
+    a.goToTop:hover {
+        background-color: yellow;
+        /* color: brown; */
+    }
+
+    a.goToTop:active {
+        background-color: yellow;
+    }
+
+    a.goToTop:visited {
+        background-color: rgb(43, 255, 43);
+
+        /* color: white; */
+    }
+
+    .contactUsClass {
+        display: flex;
+        height: 350px;
+    }
+
+    .formContact {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        padding-left: 100px;
+        border-radius: 17px;
+    }
+
+    .formContact div {
+        margin-bottom: 10px;
+    }
+
+    .leftDivForm {
+        flex: 1
+    }
+
+    .rightDivForm {
+        flex: 1
+    }
+
+    .formContact label {
+        width: 200px;
+        display: inline-block;
+        font-size: x-large;
+    }
+
+    .formContact input {
+        padding: 7px;
+    }
+
+    .formContact input:focus {
+        background-color: blue;
+    }
+
+    .submitBTN {
+        color: white;
+        padding: 5px 20px;
+        border: 0;
+        border-radius: 5px;
+        margin-left: 200px;
+    }
+
+@media screen and (max-width:650px) {
+    body{
+        background-color: pink;
+    }
+    .navbar1{
+        background-color: blue;
+    }
+    .customFontSize{
+        font-size: medium;
+        padding:10px 20px;
+
+    }
+    h1{
+        font-size: 30px;
+    }
+    .movieContainer{
+        flex-direction: column;
+
+    }
+    .textFormat{
+        font-size: medium;
+    }
+    .leftDiv, .rightDiv{
+        flex:100%;
+        color: white;
+    }
+    .contactUsClass{
+        flex-direction: column;
+        height: 700px;
+    }
+}

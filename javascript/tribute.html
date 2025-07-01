@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript</h1>
+
+
+<h2 id="headingTwo">Hello World</h2>
+
+
+<input type="text" id="movieName" />
+<input type="email" id="emailID" />
+<button onclick="getData()">Submit Data</button> 
+<p>Fav Movie : <span id="fMovie"></span></p>
+<p>Email Address : <b id="emailShow"></b></p>
+
+    <script src="./tribute.js"></script>
+
+<pre>
+    Data types in JS 
+        string      number    bigInt
+        object      null      undefined
+        symbol      Boolean                8 dataTypes
+
+
+    var                     let                          const 
+
+  global/local 
+    function scope           block                      scope 
+    reassign                Y                             N 
+    redefine                Y                             Y
+
+    </pre>
+
+    <script>
+        function getData(){
+           const FavMovie =  document.getElementById("movieName").value
+           const emailId = document.getElementById("emailID").value
+           console.log(FavMovie, emailId);
+           document.getElementById("fMovie").textContent = FavMovie 
+           document.getElementById("fMovie").style.color = "red"
+           document.getElementById("fMovie").style.fontSize = "50px"
+        }
+    </script>
+</body>
+</html>
