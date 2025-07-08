@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/addTask" method="POST">
+        <lable>Add Task name</lable>
+        <input type="text" name="taskName" placeholder="add task here"/>
+        <input type="submit" />
+    </form>
+
+    <hr>
+<ul>
+    {% for task in todos %}
+        <li>{{ task.task_name }} - {{ 'DONE' if task.status else 'PENDING'}}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
