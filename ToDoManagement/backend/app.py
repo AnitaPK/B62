@@ -33,5 +33,38 @@ def addNewTask():
 
     return redirect('/')
 
+@app.route('/deleteTask/<int:id>')
+def deleteTask(id):
+    connection = get_connection()
+    cursor = connection.cursor()
+    cursor.execute("delete from tasks where id=%s", (id,))
+    connection.commit()
+    connection.close()
+
+    return redirect('/')
+
+@app.route('/edit/<int:id>')
+def editTask(id):
+    connection = get_connection()
+    cursor = connection.cursor()
+    cursor.execute("select * from tasks where id=%s", (id))
+    task = cursor.fetchone()
+    connection.commit()
+    connection.close()
+
+    return render_template('edit.html', task=task)
+
+@app.route('/update/<int:id>', methods=['POST'])
+def updateTask(id):
+    taskNewName = request.form.get('taskName')
+    status = 1 if request.form.get('status') == 'on' else 0
+    connection = get_connection()
+    cursor = connection.cursor()
+    cursor.execute("update tasks set task_name=%s, status=%s where id=%s" ,(taskNewName,status,id ))
+    connection.commit()
+    connection.close()
+
+    return redirect('/')
+
 if __name__ == '__main__':
     app.run(debug=True)

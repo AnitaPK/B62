@@ -1,0 +1,8 @@
+<h2 style="text-align: center;">Edit Task</h2>
+<div style="background-color: rgb(227, 227, 227);margin:10px auto; width: 50%; height: 250px; padding-top: 30px; padding-left: 50px;">
+<form action="/update/{{task.id}}" method="POST">
+    <input type="text" name="taskName" value="{{ task.task_name }}" />
+    <input type="checkbox" name="status" {% if task.status %} checked {% endif %} />
+    <input type="submit" >
+</form>
+</div>  

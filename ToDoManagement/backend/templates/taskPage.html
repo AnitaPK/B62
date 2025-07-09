@@ -15,7 +15,10 @@
     <hr>
 <ul>
     {% for task in todos %}
-        <li>{{ task.task_name }} - {{ 'DONE' if task.status else 'PENDING'}}</li>
+        <li>{{ task.task_name }} - {{ 'DONE' if task.status else 'PENDING'}}
+            [<a href="/edit/{{task.id}}">Edit</a>]
+            [<a href="/deleteTask/{{ task.id }}" onclick="return confirm('Are you sure?')">Delete</a>]
+        </li>
     {% endfor %}
     </ul>
 </body>
